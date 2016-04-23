@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">手机卫士</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="main">主界面</string>
+    <string name="version">版本号</string>
+    <string name="setUpWizard1">设置向导1/4</string>
+    <string name="setUpWizard2">设置向导2/4</string>
+    <string name="setUpWizard3">设置向导3/4</string>
+    <string name="setUpWizard4">设置向导4/4</string>
+    <string name="wizard1_title">1.欢迎使用手机防盗</string>
+    <string name="wizard1_content_include">您的手机防盗卫士：</string>
+    <string name="wizard1_content_sim">sim卡变更报警</string>
+    <string name="wizard1_content_gps">gps追踪</string>
+    <string name="wizard1_content_teldeletedata">远程销毁数据</string>
+    <string name="wizard1_content_tellock">远程锁屏</string>
+    <string name="safe_number">安全手机号码</string>
+    <string name="reenter_setup_wizard">重新进入设置向导</string>
+    <string name="select_contact">选择联系人</string>
+    <string name="super_tools">高级工具</string>
+    <string name="query_number">号码归属地查询</string>
+</resources>

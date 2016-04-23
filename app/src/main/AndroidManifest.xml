@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gjg.mobilesafe" >
+
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+
+
+    <!--<instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.gjg.mobilesafe"/>-->
+        
+    <!--application中的 icon: 作用在设置中的管理应用程序
+     activity中的icon ： 作用在手机桌面-->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon5"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <!--<uses-library android:name="android.test.runner"/>-->
+        
+        <activity
+            android:name=".ui.SplashActivity"
+            android:icon="@drawable/icon5"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name=".ui.MainActivity"
+            android:label="@string/main">
+
+        </activity>
+
+        <activity android:name=".ui.LostProtectActivity">
+
+        </activity>
+
+        <receiver android:name=".receive.CallPhoneReceiver">
+               <intent-filter
+                   android:priority="1000">
+                   <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+
+               </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receive.BootCompleteReceiver">
+            <intent-filter
+                android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receive.SMSReceiver">
+            <intent-filter
+                android:priority="1000">
+                <action android:name="android.provider.Telephony.SMS_RECEIVER"/>
+
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receive.MyAdmin" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/my_admin" />
+
+            <intent-filter >
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".ui.SetUpWizard"
+            android:label="@string/setUpWizard1">
+
+        </activity>
+
+        <activity android:name=".ui.SetUpWizard2"
+            android:label="@string/setUpWizard2">
+
+        </activity>
+        <activity android:name=".ui.SetUpWizard3"
+            android:label="@string/setUpWizard3">
+
+        </activity>
+        <activity android:name=".ui.SetUpWizard4"
+            android:label="@string/setUpWizard4">
+
+        </activity>
+
+        <activity android:label="@string/select_contact"
+            android:name=".ui.SelectContactActivity">
+
+        </activity>
+        <activity android:label="@string/super_tools"
+            android:name=".ui.AtoolsActivity">
+            
+        </activity>
+        <activity android:label="@string/query_number"
+            android:name=".ui.QueryNumberActivity">
+
+        </activity>
+    </application>
+
+</manifest>

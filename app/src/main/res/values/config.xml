@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <!-- <string name="updataurl">http://192.168.56.101:8080/updateinfo.xml</string>-->
+    <string name="updataurl">http://127.0.0.1:8080/updateinfo.xml</string>
+</resources>
